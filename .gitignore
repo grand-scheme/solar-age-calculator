@@ -2,3 +2,8 @@ README.md
 index.html
 css/
 license.txt
+src/jquery-3.5.1.js
+node_modules/
+.DS_Store
+dist/
+coverage/
