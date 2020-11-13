@@ -2,10 +2,14 @@ import $ from 'jquery';
 import 'bootstrap';
 import './css/bootstrap.css';
 import './css/styles.css';
+import Mercury from './js/mercury.js';
 
 $(document).ready(function() {
   $("#age-input").submit(function(e) {
     e.preventDefault();
-    $("#output-text").text($("#input").val());
+    const age = $("#input").val();
+    const mercury = new Mercury(age);
+    const response = mercury.verifyAge();
+    $("#output-text").text(response);
   });
 });
