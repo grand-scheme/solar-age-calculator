@@ -6,6 +6,8 @@ export default class LifeExpectancy {
   LifeExpectancy() {
     if (isNaN(this.age)) {
       return "is not a number";
+    } else {
+      return (100 - this.age);
     }
   }
 
