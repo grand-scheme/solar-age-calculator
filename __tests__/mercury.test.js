@@ -24,6 +24,10 @@ describe('Mercury', () => {
 
   test('should convert Earth years to Mercury years', () => {
     const mercTestSix = new Mercury(10);
-    expect(mercTestSix.calculateAge()).toEqual(2.4);
+    expect(mercTestSix.calculateAge()).toBeCloseTo(2.4);
+  });
+  test('should verify failsafe works as intended', () => {
+    const mercTestSeven = new Mercury("bad input");
+    expect(mercTestSeven.calculateAge()).toEqual("is not a number");
   });
 });
