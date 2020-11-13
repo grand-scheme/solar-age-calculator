@@ -9,7 +9,7 @@ $(document).ready(function() {
     e.preventDefault();
     const age = $("#input").val();
     const mercury = new Mercury(age);
-    const response = mercury.verifyAge();
+    const response = mercury.calculateAge();
     $("#output-text").text(response);
   });
 });
