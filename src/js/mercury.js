@@ -4,10 +4,10 @@ export default class Mercury {
   }
 
   verifyAge() {
-    if (this.age.isInteger()) {
-      return true;
+    if (isNaN(this.age)) {
+      return "is not a number";
     } else {
-      return false;
+      return "is a number";
     }
   }
 }
