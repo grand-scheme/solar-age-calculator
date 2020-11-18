@@ -10,10 +10,22 @@
 <body>
   <h2>Input age to be converted:</h2>
   <form id="age-input">
-    <label for="input">Please use whole years only.</label> <br />
+    <p>
+      Please use numbers with decimal notation for partial years. For example, to calculate the solar age of an 18-month-old human infant, please use " <tt>1.5</tt> "
+    </p>
+    <label for="input">Input age in years:</label> <br />
     <input id="input">
     <button type="submit">Submit</button>
   </form>
-  <div id="output-text"></div>
+  <div id="output-text">
+    <p> On Earth, you are about <span id="earth-age"></span> years old. Here's how old you are on our four nearest planetary neighbors:
+      <ul>
+        <li> On Mercury: <span id="mercury-age"></span> </li>
+        <li> On Venus: <span id="venus-age"></span> </li>
+        <li> On Mars: <span id="mars-age"></span> </li>
+        <li> On Jupiter: <span id="jupiter-age"></span> </li>
+      </ul>
+    </p>
+  </div>
 </body>
 </html>
