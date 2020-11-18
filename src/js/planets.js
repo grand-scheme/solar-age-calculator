@@ -3,6 +3,7 @@ export default class Planets {
     this.age     = age;
     this.mercury = (this.age / 0.24);
     this.venus   = (this.age / 0.62);
+    this.earth   = (this.age / 1);
     this.mars    = (this.age / 1.88);
     this.jupiter = (this.age / 11.86);
   }
