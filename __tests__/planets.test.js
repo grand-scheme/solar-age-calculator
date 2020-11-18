@@ -6,19 +6,19 @@ describe('Planets', () => {
 planetsTest = new Planets(10);
   });
   test('should store value for Venus', () => {
-    expect(planetsTest.venus).toBeCloseTo(6.2);
+    expect(planetsTest.venus).toBeCloseTo(16.13);
   });
   test('should store value for Mercury', () => {
-    expect(planetsTest.mercury).toBeCloseTo(2.4);
+    expect(planetsTest.mercury).toBeCloseTo(41.67);
   });
   test('should store value for Age', () => {
     expect(planetsTest.age).toBeCloseTo(10);
   });
   test('should store value for Mars', () => {
-    expect(planetsTest.mars).toBeCloseTo(18.80);
+    expect(planetsTest.mars).toBeCloseTo(5.32);
   });
   test('should store value for Jupiter', () => {
-    expect(planetsTest.jupiter).toBeCloseTo(118.60);
+    expect(planetsTest.jupiter).toBeCloseTo(0.84);
   });
 });
 
@@ -28,9 +28,9 @@ describe('PlanetaryMath()', () => {
     mathTest = new Planets(100);
   });
   test('should return portion of planetaryObject', () => {
-    expect(mathTest.PlanetaryMath().mercury).toBeCloseTo(24);
+    expect(mathTest.PlanetaryMath().mercury).toBeCloseTo(416.67);
   });
   test('should return different portion of planetaryObject', () => {
-    expect(mathTest.PlanetaryMath().jupiter).toBeCloseTo(1186);
+    expect(mathTest.PlanetaryMath().jupiter).toBeCloseTo(8.43);
   });
 });
