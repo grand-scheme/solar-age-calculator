@@ -5,12 +5,15 @@ describe('Planets', () => {
   beforeEach(() => {
 planetsTest = new Planets(10);
   });
-  test('should store value for Venus', () => {
-    expect(planetsTest.venus).toBeCloseTo(16.13);
-  });
   test('should store value for Mercury', () => {
     expect(planetsTest.mercury).toBeCloseTo(41.67);
   });
+test('should store value for Venus', () => {
+  expect(planetsTest.venus).toBeCloseTo(16.13);
+});
+test('should store value for Earth', () => {
+  expect(planetsTest.earth).toBeCloseTo(10);
+});
   test('should store value for Age', () => {
     expect(planetsTest.age).toBeCloseTo(10);
   });
@@ -32,5 +35,9 @@ describe('PlanetaryMath()', () => {
   });
   test('should return different portion of planetaryObject', () => {
     expect(mathTest.PlanetaryMath().jupiter).toBeCloseTo(8.43);
+  });
+  test('should return error for not a number', () => {
+    const badInput = new Planets("Seventeen");
+    expect(badInput.PlanetaryMath()).toEqual("is not a number");
   });
 });
