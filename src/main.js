@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import 'bootstrap';
-import './css/bootstrap.css';
 import './css/styles.css';
 import Planets from './js/planets.js';
 import LifeExpectancy from './js/life-expectancy.js';
@@ -15,7 +14,7 @@ $(document).ready(function() {
     
     const earthYearCount = new LifeExpectancy(age);
     const earthYearsRemaining = earthYearCount.TickTock();
-    const solarDeath = new Planets(earthYearsRemaining)
+    const solarDeath = new Planets(earthYearsRemaining);
 
     $("#output-text").show();
 
