@@ -1,17 +1,18 @@
 export default class Planets {
-  constructor(ageC) {
-    this.ageC = ageC;
-    this.mercury = (this.ageC + 1);
-    this.ven = (this.ageC * 0.62);
-    this.mars = (this.ageC + 3);
-    this.jup = (this.ageC + 4);
+  constructor(age) {
+    this.age     = age;
+    this.mercury = (this.age * 0.24);
+    this.venus   = (this.age * 0.62);
+    this.mars    = (this.age * 1.88);
+    this.jupiter = (this.age * 11.86);
   }
 
-  Planets() {
-      if (isNaN(this.ageC)) {
-        return "is not a number";
-      } else {
-        planetaryArray = new Planets(this.ageC, this.mercury, this.ven, this.mars, this.jup);
-      }
+  PlanetaryMath() {
+    if (isNaN(this.age)) {
+      return "is not a number";
+    } else {
+      let planetaryObject = new Planets(this.age);
+      return planetaryObject;
+    }
   }
 }
