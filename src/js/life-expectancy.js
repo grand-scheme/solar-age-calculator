@@ -3,11 +3,12 @@ export default class LifeExpectancy {
     this.age = age;
   }
 
-  LifeExpectancy() {
+  TickTock() {
     if (isNaN(this.age)) {
       return "is not a number";
     } else {
-      return (100 - this.age);
+      let timeRemaining = (77 - this.age);
+      return timeRemaining;
     }
   }
 
