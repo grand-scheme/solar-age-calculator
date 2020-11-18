@@ -2,14 +2,14 @@ import $ from 'jquery';
 import 'bootstrap';
 import './css/bootstrap.css';
 import './css/styles.css';
-import Mercury from './js/mercury.js';
+import Planets from './js/planets.js';
 
 $(document).ready(function() {
   $("#age-input").submit(function(e) {
     e.preventDefault();
     const age = $("#input").val();
-    const mercury = new Mercury(age);
-    const response = mercury.calculateAge();
+    const mathTime = new Planets(age);
+    const response = mathTime.PlanetaryMath();
     $("#output-text").text(response);
   });
 });
