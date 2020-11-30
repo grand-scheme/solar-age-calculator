@@ -8,8 +8,12 @@ export default class LifeExpectancy {
       return "is not a number";
     } else {
       let timeRemaining = (77 - this.age);
-      return timeRemaining;
+      if (this.age > 77) {
+        let timeExceeding = (timeRemaining * -1);
+        return timeExceeding;
+      } else {
+        return timeRemaining;
+      }
     }
   }
-
 }

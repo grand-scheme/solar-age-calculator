@@ -15,4 +15,8 @@ describe('LifeExpectancy', () => {
   test('should incorporate tested subtraction into function', () => {
     expect(goodLifeInput.TickTock()).toBeCloseTo(27);
   });
+  test('should tell the difference between a positive and negative number of remaining years', () => {
+    const deadManInput = new LifeExpectancy(100);
+    expect(deadManInput.TickTock()).toBeCloseTo(23);
+  });
 });
