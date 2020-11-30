@@ -15,7 +15,7 @@ $(document).ready(function() {
       $(".past-death").show();
     } else {
       $(".left-to-live").show();
-    };
+    }
 
     const orbitCount = new Planets(age);
     const orbits = orbitCount.PlanetaryMath();
