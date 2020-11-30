@@ -8,6 +8,14 @@ $(document).ready(function() {
   $("#age-input").submit(function(e) {
     e.preventDefault();
     const age      = $("#input").val();
+    $("#input").val("");
+    $(".past-death").hide();
+    $(".left-to-live").hide();
+    if (age > 77) {
+      $(".past-death").show();
+    } else {
+      $(".left-to-live").show();
+    };
 
     const orbitCount = new Planets(age);
     const orbits = orbitCount.PlanetaryMath();
@@ -15,6 +23,7 @@ $(document).ready(function() {
     const earthYearCount = new LifeExpectancy(age);
     const earthYearsRemaining = earthYearCount.TickTock();
     const solarDeath = new Planets(earthYearsRemaining);
+    
 
     $("#output-text").show();
 
